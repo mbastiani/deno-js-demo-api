@@ -1,4 +1,4 @@
-ENTRY_POINT := app.ts
+ENTRY_POINT := ./app/main.ts
 
 default:
 	make dev
@@ -13,8 +13,10 @@ format:
 	deno fmt
 
 install:
-	deno install --allow-net --allow-write --allow-read --allow-plugin --unstable -f https://deno.land/x/denon/denon.ts;
+	deno install --allow-net --allow-write --allow-read --allow-plugin --unstable -f $(ENTRY_POINT)
 
+docker:
+	docker build -t app . && docker run -it --init -p 7700:7700 app
 run:
 	deno run --allow-net --allow-write --allow-read --allow-plugin --unstable $(ENTRY_POINT)
 
