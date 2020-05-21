@@ -2,7 +2,7 @@ FROM hayd/alpine-deno:1.0.0
 
 EXPOSE 7700
 
-WORKDIR /app
+WORKDIR /src
 
 COPY . ./
 

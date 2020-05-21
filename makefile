@@ -1,4 +1,4 @@
-ENTRY_POINT := ./app/main.ts
+ENTRY_POINT := src/main.ts
 
 default:
 	make dev
