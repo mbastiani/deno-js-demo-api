@@ -17,6 +17,7 @@ install:
 
 docker:
 	docker build -t app . && docker run -it --init -p 7700:7700 app
+	
 run:
 	deno run --allow-net --allow-write --allow-read --allow-plugin --unstable $(ENTRY_POINT)
 

@@ -34,7 +34,7 @@ const getPersons = async (context: any) => {
 
 const getPerson = async (context: any) => {
     let person: IPerson | undefined = await db.persons.findOne({ _id: { "$oid": context.params.id } });
-    
+
     return ResultCreator.createOkResult(context, person);
 }
 
