@@ -15,7 +15,7 @@
                 "--inspect-brk",
                 "--unstable",
                 "-A",
-                "app/main.ts"
+                "src/main.ts"
             ],
             "port": 9229
         }

@@ -1,4 +1,4 @@
-import { MongoClient, Database, Collection } from "https://deno.land/x/mongo@v0.7.0/mod.ts";
+import { MongoClient, Database, Collection } from "https://deno.land/x/mongo/mod.ts";
 
 class DB {
   public client: MongoClient;
